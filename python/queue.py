@@ -20,23 +20,21 @@ class queue(object):
 
     def dequeue(self):
         retValue = None
-        if self.ptr is None:
+        if self.head is None:
             return 'Queue is empty'
         else:
-            retValue = self.ptr.value
-            tmp = self.head
-            if tmp is self.ptr:
-                self.ptr = None
-                self.head = None
+            retValue = self.head.value
+            if head is ptr:
+                head = None
+                ptr = None
             else:
-                while tmp.next is not self.ptr:
-                    tmp = tmp.next
-                    continue
-                tmp.next = None
-                self.ptr = tmp
+                head = head.next;
 
             return retValue
 
     def peek(self):
-        return self.ptr.value;
+        if head is not None:
+            return self.head.value;
+        else:
+            return 'Queue is empty'
 
