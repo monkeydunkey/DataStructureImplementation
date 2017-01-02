@@ -7,13 +7,16 @@ class queue(object):
         self.ptr = None;
         self.head = None;
 
-    def enqueue(self, value):
-        if self.head is None:
-            self.head = ll.singleNode(value)
-            self.ptr = self.head
-        else:
-            self.ptr.next = ll.singleNode(value);
-            self.ptr = self.ptr.next;
+    def enqueue(self, values):
+        if not isinstance(values, list):
+            values = [values]
+        for value in values: 
+            if self.head is None:
+                self.head = ll.singleNode(value)
+                self.ptr = self.head
+            else:
+                self.ptr.next = ll.singleNode(value);
+                self.ptr = self.ptr.next;
 
     def dequeue(self):
         retValue = None
