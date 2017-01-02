@@ -33,3 +33,7 @@ class queue(object):
                 self.ptr = tmp
 
             return retValue
+
+    def peek(self):
+        return self.ptr.value;
+
