@@ -10,14 +10,14 @@ class binaryNode(treeNode):
 
 class binaryTree(object):
     def __init__(self):
-        self.head = None
+        self.root = None
 
     def insert(self, value):
-        if self.head is None:
-            self.head = binaryNode(value)
+        if self.root is None:
+            self.root = binaryNode(value)
         else
-            tmp = head
-            parentNode = head
+            tmp = self.root
+            parentNode = self.root
             while tmp is not None:
                 parentNode = tmp
                 if tmp.value > value:
@@ -31,10 +31,10 @@ class binaryTree(object):
 
     # Checks if a value is present in the tree or not
     def contains(self, value):
-        if self.head is None:
+        if self.root is None:
             return 'The tree is empty'
         else:
-            tmp = head
+            tmp = self.root
             while tmp is not None:
                 if tmp.value == value:
                     return True
