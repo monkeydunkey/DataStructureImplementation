@@ -69,19 +69,48 @@ class binarySearchTree(object):
         print node.value
 
     # level-order  print
-    def levelPrint(self)
+    # def levelPrint(self)
 
     # prints the size of the tree
-    def size(self)
+    def size(self, node = None):
+        if node is None:
+            node = self.root
+        left = 0
+        right = 0
+        if node.left is not None:
+            left = size(node.left)
+        if node.right is not None:
+            right = size(node.right)
+        return left + right + 1
 
     # prints the max depth
-    def maxDepth(self)
+    def maxDepth(self, node = None):
+        if node is None:
+            none = self.root
+        leftDepth = 0
+        rightDepth = 0
+        if node.left is not None:
+            leftDepth = size(node.left)
+        if node.right is not None:
+            rightDepth = size(node.right)
+        return max(leftDepth, rightDepth) + 1
 
     # prints the max value
-    def maxValue(self)
+    def maxValue(self, node = None):
+        if node is None:
+            node = self.root
+        if node.right is None:
+            return node.value
+        else:
+            return maxValue(node.right)
 
     # prints the min value
     def minValue(self)
-
+        if node is None:
+            node = self.root
+        if node.left is None:
+            return node.value
+        else:
+            return minValue(node.left)
     # mirrors the existing tree
-    def mirror(self)
+    # def mirror(self)
