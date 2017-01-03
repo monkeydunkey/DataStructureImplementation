@@ -48,9 +48,26 @@ class binarySearchTree(object):
                         tmp = tmp.right
             return False
 
-    # implement inorderWalk
-    def inorderWalk(self, node)
+    # in-order walk print
+    def inOrderWalk(self)
 
-    # implement level print
-    def levelPrint(self, node)
-        
+    # post-order walk print
+    def postOrderWalk(self)
+
+    # level-order  print
+    def levelPrint(self)
+
+    # prints the size of the tree
+    def size(self)
+
+    # prints the max depth
+    def maxDepth(self)
+
+    # prints the max value
+    def maxValue(self)
+
+    # prints the min value
+    def minValue(self)
+
+    # mirrors the existing tree
+    def mirror(self)
