@@ -49,10 +49,24 @@ class binarySearchTree(object):
             return False
 
     # in-order walk print
-    def inOrderWalk(self)
+    def inOrderWalk(self, node = None):
+        if node is None:
+            node = self.root
+        if node.left is not None:
+            inOrderWalk(node.left)
+        print node.value
+        if node.right is not None:
+            inorderWalk(node.right)
 
     # post-order walk print
-    def postOrderWalk(self)
+    def postOrderWalk(self, node = None):
+        if node is None:
+            node = self.root
+        if node.left is not None:
+            postOrderWalk(node.left)
+        if node.right is not None:
+            postOrderWalk(node.right)
+        print node.value
 
     # level-order  print
     def levelPrint(self)
