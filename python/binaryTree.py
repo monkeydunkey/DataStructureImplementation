@@ -1,4 +1,7 @@
+## this will contain the implementation of both binary tree and binary search
+## tree
 from trees import treeNode
+
 
 class binaryNode(treeNode):
 
@@ -8,7 +11,7 @@ class binaryNode(treeNode):
         self.right = self.child2
 
 
-class binaryTree(object):
+class binarySearchTree(object):
     def __init__(self):
         self.root = None
 
@@ -44,3 +47,10 @@ class binaryTree(object):
                     else:
                         tmp = tmp.right
             return False
+
+    # implement inorderWalk
+    def inorderWalk(self, node)
+
+    # implement level print
+    def levelPrint(self, node)
+        
