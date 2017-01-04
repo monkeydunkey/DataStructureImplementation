@@ -85,7 +85,7 @@ class binarySearchTree(object):
     # prints the max depth
     def maxDepth(self, node = None):
         if node is None:
-            none = self.root
+            node = self.root
         leftDepth = 0
         rightDepth = 0
         if node.left is not None:
@@ -104,7 +104,7 @@ class binarySearchTree(object):
             return self.maxValue(node.right)
 
     # prints the min value
-    def minValue(self):
+    def minValue(self, node = None):
         if node is None:
             node = self.root
         if node.left is None:
