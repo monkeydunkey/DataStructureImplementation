@@ -21,4 +21,23 @@ def search_kmp(string, patt):
                 if len(pre_suff) != k+1:
                     pre_suff.append(0)
 
-    return pre_suff
+    # now the prefix and suffix patterns are ready, time to do the actual
+    # pattern match
+    string = list(string)
+    k = 0 
+    matches = []
+    for i, ele in enumerate(string):
+        if patt[k] == ele:
+            if k == len(patt) - 1:
+                matches.append( {'ind': i-k, 'patt': ''.join(patt) })
+                k = pre_suff[k]
+                continue
+            k = k + 1
+        else:
+            while k > 0:
+                k = pre_suff[k-1]
+                if patt[k] == ele:
+                    k = k + 1
+                    break
+    return 'No match found' if len(matches) == 0 else matches
+
